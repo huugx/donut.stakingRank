@@ -8,10 +8,10 @@ from mdtable import MDTable
 cwd = os.path.dirname(os.path.abspath(__file__))
 
 
-finalData = []
 compData = []
 compStake = []
 compAddr = []
+finalData = []
 ethtraderAddr = []
 
 callMethod = {
@@ -27,19 +27,19 @@ withdrawJSON = 'https://blockscout.com/xdai/mainnet/api?module=logs&action=getLo
 usersJSON = 'https://raw.githubusercontent.com/EthTrader/donut.distribution/main/out/users_2021-06-24.json' 
 
 # sending get request and saving the response as response object
-rStakeJSON = requests.get(url = stakeJSON)
-rWithdrawJSON = requests.get(url = withdrawJSON)
-rUsersJSON = requests.get(url = usersJSON)
+stakeJSON = requests.get(url = stakeJSON)
+withdrawJSON = requests.get(url = withdrawJSON)
+usersJSON = requests.get(url = usersJSON)
 
 # extracting data in json format
-stakeData = rStakeJSON.json()
-usersData = rUsersJSON.json()
+stakeData = stakeJSON.json()
+usersData = usersJSON.json()
 
 
 # API can return max 1000 logs
 print(len(stakeData['result']))
 
-stakeData['result'].extend(rWithdrawJSON.json()['result'])
+stakeData['result'].extend(withdrawJSON.json()['result'])
 
 
 # merge reddit usernames into json
@@ -81,6 +81,8 @@ while j <= length:
         del finalData[length-j]
     j += 1
 
+
+finalData = sorted(finalData, key = lambda i: i['data'],reverse=True)
 
 #date
 today = date.today()
