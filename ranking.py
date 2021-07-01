@@ -3,7 +3,7 @@ import requests
 import csv
 from datetime import date
 import os
-
+from mdtable import MDTable
 
 cwd = os.path.dirname(os.path.abspath(__file__))
 
@@ -87,15 +87,16 @@ today = date.today()
 date = today.strftime("%Y-%m-%d")
 
 #write files
-dir = os.path.join(cwd, 'archive/donutStaking_', date)
+dir1 = os.path.join(cwd, 'archive/donutStaking'+'_'+date)
+dir0 = os.path.join(cwd, 'README.md')
 
 y = json.dumps(finalData, indent = 4)
-jsonFile = open(dir+'.json', 'w')
+jsonFile = open(dir1+'.json', 'w')
 jsonFile.write(y)
 jsonFile.close()
 
 
-data_file = open(dir+'.csv', 'w', newline='')
+data_file = open(dir1+'.csv', 'w', newline='')
 csv_writer = csv.writer(data_file)
  
 count = 0
@@ -107,3 +108,8 @@ for data in finalData:
     csv_writer.writerow(data.values())
  
 data_file.close()
+
+
+markdown = MDTable(dir1+'.csv')
+markdown_string_table = markdown.get_table()
+markdown.save_table(dir0)
