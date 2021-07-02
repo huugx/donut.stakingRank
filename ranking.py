@@ -37,7 +37,7 @@ usersData = usersJSON.json()
 
 
 # API can return max 1000 logs
-print(len(stakeData['result']))
+print('Total logs returned: ', len(stakeData['result']), ' (max 1000)')
 
 stakeData['result'].extend(withdrawJSON.json()['result'])
 
@@ -83,6 +83,8 @@ while j <= length:
 
 
 finalData = sorted(finalData, key = lambda i: i['data'],reverse=True)
+
+print('Total LP tokens staked: ', sum(item['data'] for item in finalData))
 
 #date
 today = date.today()
