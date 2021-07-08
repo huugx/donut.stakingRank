@@ -26,7 +26,7 @@
     },
     {
         "username": "kohrts",
-        "data": 8417.967533004741,
+        "data": 9078.60958856186,
         "address": "0x4ef0eae978cc851ad05f90d34ce58d51d27eb096"
     },
     {
@@ -50,14 +50,14 @@
         "address": "0x1d63d569c1e02a9ea187905f95d47b7701aae3a3"
     },
     {
+        "username": "Aguaskeepartdeux",
+        "data": 1240.530227823687,
+        "address": "0x8f8e6bb6d20fb56a6988f91e60cf8b5437cc052f"
+    },
+    {
         "username": "Cryptonault",
         "data": 1172.731673505507,
         "address": "0x226e9da4b9c4dcbda571b5a01646c55ae0b5a52a"
-    },
-    {
-        "username": "Aguaskeepartdeux",
-        "data": 1151.4340123491384,
-        "address": "0x8f8e6bb6d20fb56a6988f91e60cf8b5437cc052f"
     },
     {
         "username": "",
@@ -81,12 +81,12 @@
     },
     {
         "username": "ejdunia",
-        "data": 589.6515554058084,
+        "data": 597.4941292437317,
         "address": "0x3e20204fe94073ad114e01eb756755c912412860"
     },
     {
         "username": "MicThess",
-        "data": 421.99616802789893,
+        "data": 421.9961680278988,
         "address": "0x6dbbae34efed73c2fe9fa67cf929408f60e2320c"
     },
     {
@@ -98,6 +98,11 @@
         "username": "rayQuGR",
         "data": 321.6820650713484,
         "address": "0x2cf036f1fe2833a344e43d9da9372667f084d5a5"
+    },
+    {
+        "username": "SqrHornet",
+        "data": 320.15351593368223,
+        "address": "0x83800bdc4f58a6cbdf156a9f35158e5c6241551e"
     },
     {
         "username": "DDDUnit2990",
@@ -143,11 +148,6 @@
         "username": "",
         "data": 8.796414602485811,
         "address": "0xac66ab400b858ad89478d34399885126e6dc7011"
-    },
-    {
-        "username": "SqrHornet",
-        "data": 8.372768476374723,
-        "address": "0x83800bdc4f58a6cbdf156a9f35158e5c6241551e"
     },
     {
         "username": "sirjakobos",
