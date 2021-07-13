@@ -61,9 +61,10 @@ for i, row in enumerate(stakeData['result']):
         compAddr.append(address)
 
         x = {
+            '#': '',
             'username': stakeData['result'][i]['username'],
-            'data': data,
-            'address': address
+            'data': data
+            # 'address': address
             }
 
         finalData.append(x)
@@ -83,6 +84,10 @@ while j <= length:
 
 
 finalData = sorted(finalData, key = lambda i: i['data'],reverse=True)
+
+for i, data in enumerate(finalData):
+    data['#'] = i+1
+
 
 print('Total LP tokens staked: ', sum(item['data'] for item in finalData))
 
