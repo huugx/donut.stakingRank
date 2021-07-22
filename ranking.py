@@ -90,6 +90,7 @@ for i, data in enumerate(finalData):
 
 
 print('Total LP tokens staked: ', sum(item['data'] for item in finalData))
+print('Total Stakers: ', len(finalData))
 
 #date
 today = date.today()
