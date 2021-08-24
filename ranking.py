@@ -24,7 +24,7 @@ callMethod = {
 # https://blockscout.com/xdai/mainnet/api-docs
 stakeJSON = 'https://blockscout.com/xdai/mainnet/api?module=logs&action=getLogs&fromBlock=15881378&toBlock=latest&address=0x84b427415A23bFB57Eb94a0dB6a818EB63E2429D&topic0=0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d'
 withdrawJSON = 'https://blockscout.com/xdai/mainnet/api?module=logs&action=getLogs&fromBlock=15881378&toBlock=latest&address=0x84b427415A23bFB57Eb94a0dB6a818EB63E2429D&topic0=0x7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d5'
-usersJSON = 'https://raw.githubusercontent.com/EthTrader/donut.distribution/main/out/users_2021-07-15.json' 
+usersJSON = 'https://raw.githubusercontent.com/EthTrader/donut.distribution/main/out/users_2021-08-23.json' 
 
 # sending get request and saving the response as response object
 stakeJSON = requests.get(url = stakeJSON)
