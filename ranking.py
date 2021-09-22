@@ -1,12 +1,12 @@
 import json
 import requests
 import csv
-from datetime import date
+# from datetime import date, time
+import datetime
 import os
 from mdtable import MDTable
 
 cwd = os.path.dirname(os.path.abspath(__file__))
-
 
 compData = []
 compStake = []
@@ -46,7 +46,7 @@ stakeData['result'].extend(withdrawJSON.json()['result'])
 # sort and combine data
 for i, row in enumerate(stakeData['result']):
     address = '0x' + row['topics'][1][26:66].lower()   
-    y = {'username': ''}
+    y = {'username': address}
     for entry in usersData:
         if address in entry['address'].lower():
             y = {'username': entry['username']}
@@ -93,8 +93,12 @@ print('Total LP tokens staked: ', sum(item['data'] for item in finalData))
 print('Total Stakers: ', len(finalData))
 
 #date
-today = date.today()
+today = datetime.datetime.now()
 date = today.strftime("%Y-%m-%d")
+time = today.strftime("%H:%M")
+
+
+print('Last Updated: ' + date + ' at ' + time + ' EST')
 
 #write files
 dir1 = os.path.join(cwd, 'archive/donutStaking'+'_'+date)
